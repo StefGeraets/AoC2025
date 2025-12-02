@@ -6,6 +6,8 @@ const args = process.argv.slice(2);
 const dayToSolve = args[0];
 
 const log = console.log;
+const time = console.time;
+const timeEnd = console.timeEnd;
 
 if (!dayToSolve) {
 	log(
@@ -24,8 +26,18 @@ log(`\n${chalk.bold(`Solving Day #${args[0]}`)}\n`);
 		console.log(error);
 		process.exit(1);
 	}
-	const { first, second }: Puzzle = await import(`./days/${puzzleName}/Puzzle`);
 
+	const { first, second }: Puzzle = await import(`./days/${puzzleName}/Puzzle`);
+	
+	time('total runtime')
+	
+	time('part 1');
 	log(chalk.blue("Answer part 1: "), chalk.green(first(input)));
+	timeEnd('part 1');
+
+	time('part 2');
 	log(chalk.blue("Answer part 2: "), chalk.green(second(input)));
+	timeEnd('part 2');
+
+	timeEnd('total runtime');
 })();

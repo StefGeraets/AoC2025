@@ -7,7 +7,7 @@
     "@types/bun": "latest"
   },
   "scripts": {
-		"dev": "bun index.ts",
+		"dev": "bun run index.ts",
 		"day": "bun scripts/newDay.ts"
 	},
   "peerDependencies": {
