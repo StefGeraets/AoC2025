@@ -6,7 +6,7 @@ const findJoltage = (line: string, digitsToKeep: number): number => {
   for (let i = 0; i < line.length; i++) {
     const digit = line[i];
 
-    if (!digit) return;
+    if (!digit) return 0;
 
     while (
       toKeep.length > 0 &&
