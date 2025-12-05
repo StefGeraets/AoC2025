@@ -116,7 +116,7 @@ const second = (input: string) => {
     
   } while (accessibleRolls);
   
-  console.log('\n\n', wharehouseGrid.map(row => row.join('')).join('\n'));
+  // console.log('\n\n', wharehouseGrid.map(row => row.join('')).join('\n'));
   return totalRemovedRolls;
 };
 
